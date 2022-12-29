@@ -1,0 +1,52 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": [],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": []
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": []
+        },
+        {"tag": "ring",
+         "patterns": [],
+         "responses": []
+        },
+        {"tag": "gollum",
+         "patterns": [],
+         "responses": []
+        },
+        {"tag": "sam",
+         "patterns": [],
+         "responses": []
+        },
+        {"tag": "question",
+         "patterns": [],
+         "responses": ["No, it isn't. It isn't midday yet. , The days are growing darker.",]
+        },
+        {"tag": "gandalf",
+         "patterns": [],
+         "responses": ["Gandalf?", ]
+        },
+        {"tag": "random",
+         "patterns": [],
+         "responses": ["Oooohhh!",]
+        },
+        {"tag": "askme",
+         "patterns": [],
+         "responses": ["What about you?", "For what?"]
+        },
+        {"tag": "gollum",
+         "patterns": [],
+         "responses": []
+        },
+        {"tag": "gollum",
+         "patterns": [],
+         "responses": []
+        }
+]
+}

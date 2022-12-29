@@ -1,0 +1,27 @@
+import pandas as pd
+import json
+import nltk
+from rake_nltk import Rake
+from collections import defaultdict
+from nltk.corpus import wordnet as wn
+
+with open('lotr_scripts.json', 'r') as f:
+    scripts = json.load(f)
+
+frodo_scripts = [" ".join(script["dialog"].split()) for script in scripts if script["char"] in ["FRODO"]]
+
+# with open('frodo_scripts.json', 'w') as f:
+# json.dump(frodo_scripts, f, indent=4)
+
+rake = Rake(min_length=1, max_length=1)
+
+tag_dict = defaultdict(list)
+for line in frodo_scripts:
+    rake.extract_keywords_from_text(line)
+    tags = rake.get_ranked_phrases()[:5]
+    for tag in tags:
+        tag_dict[tag].append(line)
+
+for key, value in tag_dict.items():
+    print(key, value) #[sn.hyponyms() for sn in wn.synsets(key)[:2]]
+print(len(tag_dict))
